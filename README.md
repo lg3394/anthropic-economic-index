@@ -1,7 +1,7 @@
 # AI Workforce Analysis
 ## Project Overview
 
-This project examines the intersection of artificial intelligence adoption and workforce equity by analyzing millions of AI conversations alongside demographic employment data. Through comprehensive data analysis and visualization, the project reveals concerning patterns about which workers and ethnic groups are benefiting from AI tools versus those at risk of being left behind in the technological revolution.
+This project examines the intersection of artificial intelligence adoption and workforce equity by analyzing millions of AI conversations alongside demographic employment data. Through data analysis and visualization, the project reveals concerning patterns about which workers and ethnic groups are benefiting from AI tools versus those at risk of being left behind in the technological revolution.
 
 ## Tools & Packages Used
 
@@ -46,9 +46,6 @@ The analysis combines quantitative data processing with clear visual storytellin
 - The analysis reflects patterns from May 2023 and may not capture rapidly evolving AI adoption trends
 - Occupational mapping between different classification systems required approximations that may introduce minor inaccuracies
 - The study cannot establish causation, only correlation, between demographic factors and AI usage patterns
-
-## About
-Project 2 of my Data Studio class, examining economic and social implications of AI technology adoption across diverse workforce populations.
 
 ## Data Sources
 - [Anthropic Economic Index](https://github.com/anthropics/economic-index) - AI task mapping and conversation analysis
