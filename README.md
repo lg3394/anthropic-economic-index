@@ -1,66 +1,54 @@
----
-license: mit
-pretty_name: EconomicIndex
-tags:
-- text
-viewer: true
-configs:
-- config_name: default
-  data_files:
-  - split: train
-    path: "onet_task_mappings.csv"
----
-## Overview
-This directory contains O*NET task mapping and automation vs. augmentation data from "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations." The data and provided analysis are described below.
+# AI Workforce Analysis
+## Project Overview
 
-**Please see our [blog post](https://www.anthropic.com/news/the-anthropic-economic-index) and [paper](https://assets.anthropic.com/m/2e23255f1e84ca97/original/Economic_Tasks_AI_Paper.pdf) for further visualizations and complete analysis.**
+This project examines the intersection of artificial intelligence adoption and workforce equity by analyzing millions of AI conversations alongside demographic employment data. Through data analysis and visualization, the project reveals concerning patterns about which workers and ethnic groups are benefiting from AI tools versus those at risk of being left behind in the technological revolution.
 
-## Data
+## Tools & Packages Used
 
-- `SOC_Structure.csv` - Standard Occupational Classification (SOC) system hierarchy from the U.S. Department of Labor O*NET database
-- `automation_vs_augmentation.csv` - Data on automation vs augmentation patterns, with columns:
-  - interaction_type: Type of human-AI interaction (directive, feedback loop, task iteration, learning, validation)
-  - pct: Percentage of conversations showing this interaction pattern
-  Data obtained using Clio (Tamkin et al. 2024)
-- `bls_employment_may_2023.csv` - Employment statistics from U.S. Bureau of Labor Statistics, May 2023
-- `onet_task_mappings.csv` - Mappings between tasks and O*NET categories, with columns:
-  - task_name: Task description
-  - pct: Percentage of conversations involving this task
-  Data obtained using Clio (Tamkin et al. 2024)
-- `onet_task_statements.csv` - Task descriptions and metadata from the U.S. Department of Labor O*NET database
-- `wage_data.csv` - Occupational wage data scraped from O*NET website using open source tools from https://github.com/adamkq/onet-dataviz
+- **Python** and **pandas** for data processing and merging
+- **Jupyter Notebook** for exploratory data analysis
+- **HTML/CSS** for web creation
+- **Git** for version control and project management
 
-## Analysis
+## Data Collection & Processing
 
-The `plots.ipynb` notebook provides visualizations and analysis including:
+### Datasets
+The analysis centered on three key datasets: Anthropic's Economic Index data containing task mappings from millions of Claude AI conversations, the U.S. Bureau of Labor Statistics Tables 8 and 18 (May 2023) providing occupational employment and earnings data by ethnicity, and the O*NET database offering detailed occupational classifications and task descriptions. The Anthropic data reveals which economic tasks are being performed with AI assistance, while the BLS data provides crucial demographic context about workforce composition across different occupations.
 
-### Task Analysis
-- Top tasks by percentage of conversations
-- Task distribution across occupational categories
-- Comparison with BLS employment data
+### Further Analysis
+Using data merging and cross-tabulation techniques, I created unified occupational categories that could be analyzed across both AI usage patterns and demographic distributions. This involved mapping O*NET Standard Occupational Classification (SOC) codes to both the AI conversation data and BLS employment statistics, scaling percentages appropriately to reflect realistic conversation volumes, and developing income bracket classifications to examine disparities across economic levels.
 
-### Occupational Analysis  
-- Top occupations by conversation percentage
-- Occupational category distributions
-- Occupational category distributions compared to BLS employment data
+## Visualizations
 
-### Wage Analysis
-- Occupational usage by wage
+1. **Top Occupations by AI Usage Chart**: A horizontal bar chart showing which specific job titles have the highest AI adoption rates, revealing the dominance of technical professions like computer programming and web development.
 
-### Automation vs Augmentation Analysis
-- Distribution across interaction modes
+2. **AI Usage by Major Occupational Groups**: A bar chart displaying AI adoption across broad occupational categories, showing Computer and Mathematical fields leading with nearly 8% of conversations.
 
-## Usage
-To generate the analysis:
+3. **AI Usage by Income Level and Ethnicity**: A grouped bar chart examining the intersection of income and race in AI adoption, revealing persistent disparities across all economic levels.
 
-1. Ensure all data files are present in this directory
-2. Open `plots.ipynb` in Jupyter
-3. Run all cells to generate visualizations
-4. Plots will be saved to the notebook and can be exported
+4. **Ethnic Distribution by Occupation Category**: A stacked horizontal bar chart showing workforce composition across different professional fields, highlighting varying levels of diversity.
 
-The notebook uses pandas for data manipulation and seaborn/matplotlib for visualization. Example outputs are contained in the `plots\` folder.
+## Key Findings
 
-**Data released under CC-BY, code released under MIT License**
+- **Technical professions dominate AI usage**: Computer programmers, web developers, and software engineers account for a disproportionate share of AI conversations relative to their workforce size
+- **Persistent racial disparities**: White workers consistently show higher AI usage rates than non-white workers across all income levels, suggesting barriers beyond economic factors
+- **Income correlation with access**: Higher-earning occupations demonstrate greater AI adoption, potentially compounding existing economic advantages
+- **Occupational segregation patterns**: Fields with the highest AI usage tend to be less ethnically diverse, while more diverse professions show minimal AI integration
 
-## Contact
-You can submit inquires to kunal@anthropic.com or atamkin@anthropic.com. We invite researchers to provide input on potential future data releases using [this form](https://docs.google.com/forms/d/e/1FAIpQLSfDEdY-mT5lcXPaDSv-0Ci1rSXGlbIJierxkUbNB7_07-kddw/viewform?usp=dialog).
+## Implementation
+
+The analysis combines quantitative data processing with clear visual storytelling to communicate complex workforce patterns. All charts were designed with accessibility in mind, using colorblind-friendly palettes and clear labeling. The accompanying web article presents findings in journalistic format to reach broader audiences beyond academic circles.
+
+## Limitations
+
+- The AI conversation data represents current usage among those already accessing advanced AI tools, potentially missing communities with limited technological access
+- BLS employment data relies on self-reported racial and ethnic identification, which can be nuanced and imperfect
+- The analysis reflects patterns from May 2023 and may not capture rapidly evolving AI adoption trends
+- Occupational mapping between different classification systems required approximations that may introduce minor inaccuracies
+- The study cannot establish causation, only correlation, between demographic factors and AI usage patterns
+
+## Data Sources
+- [Anthropic Economic Index](https://github.com/anthropics/economic-index) - AI task mapping and conversation analysis
+- [Bureau of Labor Statistics Table 8](https://www.bls.gov/cps/cpsaat08.htm) - Occupations by ethnicity (May 2023)
+- [Bureau of Labor Statistics Table 18](https://www.bls.gov/cps/cpsaat18.htm) - Earnings by ethnicity (May 2023)
+- [O*NET Database](https://www.onetonline.org/) - Occupational classifications and task descriptions
