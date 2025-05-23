@@ -1,4 +1,4 @@
-# AI Workforce Disparity Analysis
+# AI Workforce Analysis
 ## Project Overview
 
 This project examines the intersection of artificial intelligence adoption and workforce equity by analyzing millions of AI conversations alongside demographic employment data. Through comprehensive data analysis and visualization, the project reveals concerning patterns about which workers and ethnic groups are benefiting from AI tools versus those at risk of being left behind in the technological revolution.
@@ -6,10 +6,8 @@ This project examines the intersection of artificial intelligence adoption and w
 ## Tools & Packages Used
 
 - **Python** and **pandas** for data processing and merging
-- **Matplotlib** and **Seaborn** for statistical analysis and visualization
-- **NumPy** for numerical computations
 - **Jupyter Notebook** for exploratory data analysis
-- **HTML/CSS** for web presentation and responsive design
+- **HTML/CSS** for web creation
 - **Git** for version control and project management
 
 ## Data Collection & Processing
@@ -22,9 +20,9 @@ Using data merging and cross-tabulation techniques, I created unified occupation
 
 ## Visualizations
 
-1. **Top Occupations by AI Usage Chart**: Originally created by Anthropic – A horizontal bar chart showing which specific job titles have the highest AI adoption rates, revealing the dominance of technical professions like computer programming and web development.
+1. **Top Occupations by AI Usage Chart**: A horizontal bar chart showing which specific job titles have the highest AI adoption rates, revealing the dominance of technical professions like computer programming and web development.
 
-2. **AI Usage by Major Occupational Groups**: Originally created by Anthropic – A bar chart displaying AI adoption across broad occupational categories, showing Computer and Mathematical fields leading with nearly 8% of conversations.
+2. **AI Usage by Major Occupational Groups**: A bar chart displaying AI adoption across broad occupational categories, showing Computer and Mathematical fields leading with nearly 8% of conversations.
 
 3. **AI Usage by Income Level and Ethnicity**: A grouped bar chart examining the intersection of income and race in AI adoption, revealing persistent disparities across all economic levels.
 
