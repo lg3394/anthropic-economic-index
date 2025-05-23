@@ -22,9 +22,9 @@ Using data merging and cross-tabulation techniques, I created unified occupation
 
 ## Visualizations
 
-1. **Top Occupations by AI Usage Chart**: A horizontal bar chart showing which specific job titles have the highest AI adoption rates, revealing the dominance of technical professions like computer programming and web development.
+1. **Top Occupations by AI Usage Chart**: Originally created by Anthropic – A horizontal bar chart showing which specific job titles have the highest AI adoption rates, revealing the dominance of technical professions like computer programming and web development.
 
-2. **AI Usage by Major Occupational Groups**: A bar chart displaying AI adoption across broad occupational categories, showing Computer and Mathematical fields leading with nearly 8% of conversations.
+2. **AI Usage by Major Occupational Groups**: Originally created by Anthropic – A bar chart displaying AI adoption across broad occupational categories, showing Computer and Mathematical fields leading with nearly 8% of conversations.
 
 3. **AI Usage by Income Level and Ethnicity**: A grouped bar chart examining the intersection of income and race in AI adoption, revealing persistent disparities across all economic levels.
 
